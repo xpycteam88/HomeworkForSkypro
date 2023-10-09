@@ -103,11 +103,12 @@ public class homework4 {
             }
         }
 
-        int one = 12; // начало задачи 7
-        int two = 15;
-        int three = 23;
+        int one = 3; // начало задачи 7
+        int two = 5;
+        int three = 5;
         boolean variableOneEqualTwo = one == two;
         boolean variableTwoEqualThree = two == three;
+        boolean variableOneEqualThree = one == three;
 
         System.out.println("\nЗадача №7");
         System.out.println("Переменная one со значением " + one);
@@ -117,16 +118,24 @@ public class homework4 {
             System.out.println("Переменные " + one + " " + two + " " + three + " равны");
         } else {
             if (one > two) {
-                if (one > three) {
-                    System.out.println("Переменная one со значением " + one + " больше остальных");
+                if (variableOneEqualThree) {
+                    System.out.println("Переменные one и three с одинаковыми значениями");
                 } else {
-                    System.out.println("Переменная three со значением " + three + " больше остальных");
+                    if (one > three) {
+                        System.out.println("Переменная one со значением " + one + " больше остальных");
+                    } else {
+                        System.out.println("Переменная three со значением " + three + " больше остальных");
+                    }
                 }
             } else {
-                if (two > three) {
-                    System.out.println("Переменная two со значением " + two + " больше остальных");
+                if(variableTwoEqualThree) {
+                    System.out.println("Переменные two и three с одинаковыми значениями");
                 } else {
-                    System.out.println("Переменная three со значением " + three + " больше остальных");
+                    if (two > three) {
+                        System.out.println("Переменная two со значением " + two + " больше остальных");
+                    } else {
+                        System.out.println("Переменная three со значением " + three + " больше остальных");
+                    }
                 }
             }
         }
