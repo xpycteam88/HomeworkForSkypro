@@ -55,7 +55,7 @@ public class homework5 {
             System.out.println("Год должен быть больше, чем 1584 (в котором был введен високосный год)");
         }
 
-        int deliveryDistance = 100; // начало задачи 4
+        int deliveryDistance = 19; // начало задачи 4
         int deliveryDays = 1;
         System.out.println("\nЗадача №4");
         if (deliveryDistance > 100) {
