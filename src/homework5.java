@@ -54,5 +54,48 @@ public class homework5 {
         } else {
             System.out.println("Год должен быть больше, чем 1584 (в котором был введен високосный год)");
         }
+
+        int deliveryDistance = 100; // начало задачи 4
+        int deliveryDays = 1;
+        System.out.println("\nЗадача №4");
+        if (deliveryDistance > 100) {
+            System.out.println("Доставки нет");
+        } else {
+            if (deliveryDistance <= 20) {
+                } else  if (deliveryDistance > 20 && deliveryDistance < 60) {
+                deliveryDays += 1;
+            } else {
+                deliveryDays += 2;
+            }
+            System.out.println("На доставку потребуется дней: " + deliveryDays);
+        }
+
+        int monthNumber = 3; // начало задачи 5
+        System.out.println("\nЗадача №5");
+        switch (monthNumber) {
+            case 12:
+            case 1:
+            case 2:
+                System.out.println(monthNumber + " месяц относится к зиме");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                System.out.println(monthNumber + " месяц относится к весне");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println(monthNumber + " месяц относится к лету");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println(monthNumber + " месяц относится к осени");
+                break;
+            default:
+                System.out.println(monthNumber + " - такого месяца не существует");
+        }
+
     }
 }
