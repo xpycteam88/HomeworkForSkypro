@@ -14,33 +14,28 @@ public class homework5 {
                 System.out.println("Под такую систему приложение отсутствует");
         }
 
-        int clientDeviceYear = 2014; //начало задачи 2
-        clientOS = 0;
+        int clientDeviceYear = 2015; //начало задачи 2
+        clientOS = 1;
         System.out.println("\nЗадача №2");
         if (clientDeviceYear >= 2015) {
-            switch (clientOS) {
-                case 0:
-                    System.out.println("Установите версию приложения для iOS по ссылке");
-                    break;
-                case 1:
-                    System.out.println("Установите версию приложения для Android по ссылке");
-                    break;
-                default:
-                    System.out.println("Под такую систему приложение отсутствует");
+            if (clientOS == 0) {
+                System.out.println("Установите версию приложения для iOS по ссылке");
+            } else if (clientOS == 1) {
+                System.out.println("Установите версию приложения для Android по ссылке");
+            } else {
+                System.out.println("Под такую систему приложение отсутствует");
             }
-        } else switch (clientOS) {
-                case 0:
-                    System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-                    break;
-                case 1:
-                    System.out.println("Установите облегченную версию приложения для Android по ссылке");
-                    break;
-                default:
-                    System.out.println("Под такую систему приложение отсутствует");
-
+        } else {
+            if (clientOS == 0) {
+                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+            } else if (clientOS == 1) {
+                System.out.println("Установите облегченную версию приложения для Android по ссылке");
+            } else {
+                System.out.println("Под такую систему приложение отсутствует");
+            }
         }
 
-        int year = 2100; // надачло задачи 3
+        int year = 2100; // начало задачи 3
         int yearAliquot4 = year % 4;
         int yearAliquot100 = year % 100;
         int yearAliquot400 = year % 400;
@@ -55,16 +50,15 @@ public class homework5 {
             System.out.println("Год должен быть больше, чем 1584 (в котором был введен високосный год)");
         }
 
-        int deliveryDistance = 19; // начало задачи 4
+        int deliveryDistance = 61; // начало задачи 4
         int deliveryDays = 1;
         System.out.println("\nЗадача №4");
         if (deliveryDistance > 100) {
             System.out.println("Доставки нет");
         } else {
-            if (deliveryDistance <= 20) {
-                } else  if (deliveryDistance > 20 && deliveryDistance < 60) {
+            if (deliveryDistance > 20 && deliveryDistance <= 60) {
                 deliveryDays += 1;
-            } else {
+            } else if (deliveryDistance > 60) {
                 deliveryDays += 2;
             }
             System.out.println("На доставку потребуется дней: " + deliveryDays);
