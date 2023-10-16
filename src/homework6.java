@@ -63,5 +63,30 @@ public class homework6 {
             System.out.println(table + "*" + z + "=" + (table * z));
         }
 
+        System.out.println("\nДоп. задача №1"); // доп. задача 1.4 из ссылки
+        for (int a = 1; a <= 30; a++) {
+            if (a % 3 != 0 && a % 5 != 0) {
+                System.out.println(a);
+            } else if (a % 3 == 0 && a % 5 == 0) {
+                System.out.println(a + " ping pong");
+            } else if (a % 3 == 0) {
+                System.out.println(a + " ping");
+            } else {
+                System.out.println(a + " pong");
+            }
+        }
+
+        int a = 0; // доп. задача 1.5 из ссылки
+        int b = 1;
+        int sum;
+        System.out.println("\nДоп. задача №2");
+        System.out.print(a + " " + b + " ");
+        for (int i = 3; i <= 10; i++) {
+            sum = a + b;
+            System.out.print(sum + " ");
+            a = b;
+            b = sum;
+        }
+
     }
 }
